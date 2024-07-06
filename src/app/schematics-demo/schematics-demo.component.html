@@ -1,0 +1,4 @@
+@for (item of schematicsFeatures; track item.path) {
+  <button mat-flat-button [routerLink]="item.path">{{item.title}}</button>
+}
+<router-outlet />
