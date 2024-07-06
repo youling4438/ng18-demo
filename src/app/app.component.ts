@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import { NavigationDemoComponent } from './navigation-demo/navigation-demo.component';
 export interface NgFeature {
   title: string;
   path: string;
@@ -9,15 +10,11 @@ export interface NgFeature {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, MatButtonModule],
+  imports: [RouterOutlet, NavigationDemoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'ng18-demo';
 
-  ngFeatures: NgFeature[] = [
-    { title: 'Schematics Demo', path: 'schematics' },
-    { title: 'Cdk Demo', path: 'cdk' },
-  ];
 }

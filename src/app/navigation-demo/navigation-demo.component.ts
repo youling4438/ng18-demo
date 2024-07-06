@@ -8,6 +8,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { SchematicsFeature } from '../schematics-demo/schematics-demo.component';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navigation-demo',
@@ -21,6 +23,8 @@ import { map, shareReplay } from 'rxjs/operators';
     MatListModule,
     MatIconModule,
     AsyncPipe,
+    RouterOutlet,
+    RouterLink,
   ]
 })
 export class NavigationDemoComponent {
@@ -31,4 +35,13 @@ export class NavigationDemoComponent {
       map(result => result.matches),
       shareReplay()
     );
+
+  schematicsFeatures: SchematicsFeature[] = [
+    { title: 'Address Form Demo', path: 'address-form' },
+    { title: 'Dashboard Demo', path: 'dashboard' },
+    { title: 'Table Demo', path: 'table' },
+    { title: 'Tree Demo', path: 'tree' },
+    { title: 'Drag Drop Demo', path: 'drag-drop' },
+  ];
+
 }

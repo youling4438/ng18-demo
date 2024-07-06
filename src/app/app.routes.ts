@@ -43,4 +43,24 @@ export const routes: Routes = [
     path: 'cdk',
     loadComponent: () => CdkDemoComponent,
   },
+  {
+    path: 'address-form',
+    loadComponent: () => AddressFormDemoComponent,
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () => DashboardDemoComponent,
+  },
+  {
+    path: 'table',
+    loadComponent: () => TableDemoComponent,
+  },
+  {
+    path: 'tree',
+    loadComponent: () => TreeDemoComponent,
+  },
+  {
+    path: 'drag-drop',
+    loadComponent: () => DragDropDemoComponent,
+  },
 ];
